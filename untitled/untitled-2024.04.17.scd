@@ -24,7 +24,6 @@ Platform.recordingsDir;
 
 { Formlet.ar(Impulse.ar(MouseX.kr(0.2,200,1), 0, 0.4), 200, 0.01, 0.1) }.scope(1, zoom:2);
 
-
 { LFPulse.ar(LFPulse.kr(LFPulse.kr(0.2,0,0.5,8,10),0,0.5, 200,400),0,0.5,0.1)!2 }.scope(1, zoom: 4);
 
 { LFPulse.ar(100,0,LFTri.kr(0.2,0,0.5,0.5),0.1) }.scope(1, zoom: 4);
