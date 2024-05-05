@@ -57,7 +57,7 @@ d = Buffer.read(server: s, path: ~path);
 )
 
 (
-~path = PathName.new(thisProcess.nowExecutingPath).parentPath ++ "09 tambourine.wav";
+~path = PathName.new(thisProcess.nowExecutingPath).parentPath ++ "{file}.wav";
 b = Buffer.read(server: s, path: ~path);
 )
 
