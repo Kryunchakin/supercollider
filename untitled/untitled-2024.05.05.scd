@@ -29,7 +29,7 @@ num = (1..100);
 
 // Buffers
 
-b = Buffer.read(server: s, path: "{file}.vaw");
+b = Buffer.read(server: s, path: "{file}");
 
 b.play;
 
@@ -43,7 +43,7 @@ b.numChannels;
 thisProcess;
 thisProcess.nowExecutingPath;
 
-PathName.new(thisProcess.nowExecutingPath).parentPath ++ "{file}.wav";
+PathName.new(thisProcess.nowExecutingPath).parentPath ++ "{file}";
 
 b.free;
 
@@ -52,17 +52,16 @@ Buffer.free;
 s.options.numBuffers;
 
 (
-~path = PathName.new(thisProcess.nowExecutingPath).parentPath ++ "{file}.wav";
+~path = PathName.new(thisProcess.nowExecutingPath).parentPath ++ "{file}";
 d = Buffer.read(server: s, path: ~path);
 )
 
 (
-~path = PathName.new(thisProcess.nowExecutingPath).parentPath ++ "{file}.wav";
+~path = PathName.new(thisProcess.nowExecutingPath).parentPath ++ "{file}";
 b = Buffer.read(server: s, path: ~path);
 )
 
 
-// b.play;
 (
 y = {
 	var sig;
